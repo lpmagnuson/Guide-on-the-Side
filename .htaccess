@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTP_HOST} ^guideside\.palni\.org$ [OR]
+    RewriteCond %{HTTP_HOST} ^www\.guideside\.palni\.org$
+    RewriteCond %{REQUEST_URI} ^/guide_on_the_side/$
+    RewriteRule (.*)   /guide_on_the_side/$1  
+    RewriteRule    ^$    app/webroot/    [L]
+    RewriteRule    (.*)  app/webroot/$1    [L]
+ </IfModule>
